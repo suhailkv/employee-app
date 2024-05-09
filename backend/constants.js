@@ -2,8 +2,8 @@ const constants = {
   FRONT_END_URL: "http://localhost:3000",
   CORS_ENABLE_URLS: ["http://localhost:3000"],
   PORT: 5000,
-  MONGODB_CONN_URL:
-    "mongodb+srv://suhailkv:bgWT8raMyNJ8vjZm@cluster0.ixptyzt.mongodb.net/",
+  MONGODB_CONN_URL: "put your mongoDB conn url here",
   JWT_SECRET: "secret",
+  TOKEN_EXPIRY: "1h",
 };
 module.exports = constants;
