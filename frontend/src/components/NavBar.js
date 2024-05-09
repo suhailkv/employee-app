@@ -2,12 +2,15 @@ import React from "react";
 import { AppBar, Toolbar, Typography, Button } from "@material-ui/core";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
+import { clearStore } from "../store/employeeSlice"; // to clear Redux store
 import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+  const dispatch = useDispatch();
   const history = useNavigate();
 
   const handleLogout = () => {
+    dispatch(clearStore());
     history("/signup");
   };
 
