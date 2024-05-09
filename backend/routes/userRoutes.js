@@ -24,6 +24,8 @@ router.post("/signup", singupValidation, async (req, res) => {
     if (userExists) {
       return res.status(400).json({ message: "Email already exists" });
     }
+    const usernameExists = await User.findOne({ username });
+
     if (usernameExists) {
       return res.status(400).json({ message: "Username is already in use" });
     }
